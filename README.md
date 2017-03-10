@@ -18,7 +18,7 @@
   ```js
   const koa = require('koa');
   const router = require('koa-router')();
-  const reply = require('./');
+  const reply = require('koa-reply');
 
   const app = koa();
   // add reply middleware on top level
@@ -34,6 +34,7 @@
   router.post('/create', function* () {
     this.response.Created = 'success';
   });
+  // ... others
 
   app.use(router.routes());
   app.use(router.allowedMethods());
