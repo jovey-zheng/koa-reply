@@ -24,12 +24,17 @@ const statusCodeMap = {
  *    app.use(reply());
  *    ...
  *  ```
+ * @param {Object} opt
  */
-function reply() {
+function reply(opt) {
+  if (typeof opt == 'object') {
+    Object.assign(statusCodeMap, opt);
+  }
+
   return function* (next) {
     try {
       const response = this.response;
-      // Map status code
+      // map status code
       Object.keys(statusCodeMap).forEach(function(val) {
         //define property
         Object.defineProperty(response, val, {

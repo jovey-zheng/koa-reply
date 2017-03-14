@@ -1,6 +1,6 @@
 {
   "name": "koa-reply",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Middleware for Koa that adds some common methods to the Koa response.",
   "main": "index.js",
   "scripts": {

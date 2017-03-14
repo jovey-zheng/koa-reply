@@ -22,6 +22,20 @@
   - **NotFound**: 404  
   - **InternalServerError**: 500  
 
+  Or you can add your optiosns:  
+  ```js
+  const koa = require('koa');
+  const reply = require('koa-reply');
+
+  const app = koa();
+
+  app.use(reply({
+    myMethod: code
+    //...
+  }));
+  //...
+  ```
+
 # Usage
 
   Check the [example](./example.js)
